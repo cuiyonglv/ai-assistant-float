@@ -45,16 +45,9 @@ jobs:
         name: app-release
         path: app/build/outputs/apk/release/app-release.apk
 
-    - name: Create Release
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          app/build/outputs/apk/debug/app-debug.apk
-          app/build/outputs/apk/release/app-release.apk
-        tag_name: v${{ github.run_number }}
-        name: Release v${{ github.run_number }}
-        draft: false
-        prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build Summary
+      run: |
+        echo "## Build Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- Debug APK: app-debug" >> $GITHUB_STEP_SUMMARY
+        echo "- Release APK: app-release" >> $GITHUB_STEP_SUMMARY
+        echo "Download from Artifacts section below" >> $GITHUB_STEP_SUMMARY

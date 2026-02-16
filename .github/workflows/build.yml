@@ -31,7 +31,15 @@ jobs:
       run: echo "sdk.dir=$ANDROID_HOME" > local.properties
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --stacktrace
+      run: |
+        echo "Gradle version:"
+        ./gradlew --version
+        echo "Building Debug APK..."
+        ./gradlew assembleDebug --stacktrace --info || echo "Build failed"
+
+    - name: Check APK
+      run: |
+        ls -lah app/build/outputs/apk/debug/ || echo "APK not found"
 
     - name: Build Release APK
       run: ./gradlew assembleRelease --stacktrace

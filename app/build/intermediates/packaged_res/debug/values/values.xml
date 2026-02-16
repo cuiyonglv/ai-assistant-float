@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="float_button_bg">#660066FF</color>
+    <color name="float_menu_bg">#99000000</color>
+    <color name="float_menu_border">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="api_key">API密钥</string>
+    <string name="api_key_hint">请输入DMXAPI密钥</string>
+    <string name="app_name">AI语音助手</string>
+    <string name="float_window_guide_button">去设置</string>
+    <string name="float_window_guide_content">请授予悬浮窗权限以使用AI语音助手</string>
+    <string name="float_window_guide_title">悬浮窗权限</string>
+    <string name="listening">正在聆听...</string>
+    <string name="menu_close">关闭</string>
+    <string name="menu_settings">设置</string>
+    <string name="model">模型</string>
+    <string name="model_hint">选择模型</string>
+    <string name="processing">处理中...</string>
+    <string name="save">保存</string>
+    <string name="settings_title">设置</string>
+    <string name="start_voice">点击开始语音对话</string>
+    <style name="Theme.AppCompat.Light.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar"/>
+    <style name="Theme.AppCompat.Light.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar"/>
+</resources>
